@@ -127,3 +127,20 @@
     You can view the list of remotes for your repository using the command:
     'git remote -v' 
     This will show the names and URLs of all the remotes associated with your local repository.
+
+9. 'HEAD' Introduction 
+    In Git, 'HEAD' is a symbolic reference that poitns to the last commit in the branch you are currently working on. It represents the tip of the current branch and serves as a convenient way to refer to the most recent commit in your working directory.
+    Here are some key points about 'HEAD'"
+    (1) Current Commit: 'HEAD' points to the commit that your working directory reflects. If you make a new commit, 'HEAD' will be updated to point to that new commit.
+    (2) Branch Pointer: 'HEAD' is indirectly associated with the branch you are currently on. It usually points to the branch itself, and the branch, in turn, points to the latest commit in that branch.
+    (3) Detached HEAD: In Git, you can also have a "detached HEAD" state. This occurs when 'HEAD' directly points to a specific commit instead of a branch. In this state, any new commits you make won't be associated with a branch, and you might lose them if you switch branches.
+
+    Here are some common uses of 'HEAD'
+    * View Current Commit:              'git log -n 1 HEAD'
+    * Switch Branches:                  'git checkout branch_name'
+    * Create a New Branch from HEAD:    'git checkout -b new_branch_name'
+    * Detach HEAD (for viewing specific commit):    'git checkout commit_hash'
+    * Push Changes to Remote Branch:    'git push origin HEAD'
+        This pushes changes from the local branch (pointed by 'HEAD') to the remote branch.
+
+    In summary, 'HEAD' is a dynamic pointer that always points to the latest commit in the branch you are currently working on. Understanding 'HEAD' is crucial for navigating through your Git history and managing branches.
