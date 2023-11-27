@@ -90,3 +90,40 @@
     (2) If you are working in a branch and want to push changes to the remote repository with the same name, you can use a shrotcut:
     'git push origin HEAD'
     This pushes the changes from your current local branch (HEAD) to the remote branch with the same name.
+
+7. 'git push origin HEAD' Failed. fatal: 'origin' does not appear to be a git repository. 
+    The error indicates that Git is unable to find a remote repository named 'origin.' This typically means taht the remote repository is not configured for your Git repository. To resolve this, you need to set up a remote repository and associate it with the name 'origin'.
+    Here are the steps to set up a remote repository:
+    (1) Check Existing Remotes:
+        First, check if you have any existing remotes configured for your repository:
+        'git remote -v'
+        This will list the names and URLs of the remotes associated with your repository.
+    (2) Add 'origin' Remote:
+        If 'origin' is not listed, or if you need to update the remote URL, you can add it using the following command:
+        'git remote add origin <repository_url>'
+        Replace '<repository_url>' with the actual URL of your remote repository. For example, if you are using HTTPS:
+        'git remote add origin https://github.com/username/repo.git'
+        Or if you are using SSH:
+        'git remote add origin git@github.com:username/repo.git'
+    (3) Verify Remote Configuration:
+        After adding the remote: you can verify the remote configuration:
+        'git remote -v'
+        Ensure that 'origin' is listed with the correct URL.
+    (4) Push to 'origin'
+        Now, you can push your changes to the 'origin' remote:
+        'git push origin HEAD'
+        This command pushes the changes in your current branch to the remote branch with the same name.
+
+8. Meaning of 'origin'
+    In Git, "origin" is the default name given to the remote repository from which your local reopsitory was cloned. It's a conventionally used alias for the URL of the remote repository.
+    Here's a breakdown of the term:
+    * Remote Repository: A remote repository is a version of your project hoseted on a server or another location. This allows multiple developers to work on the same project. The remote repository is usually hosted on platforms like GitHub, GitLab, Bitbucket, or a private server.
+    * Origin: "Origin" is just a conventionally used name for the default remote repository. When you clone a repository, Git automatically sets up a remote named "origin" that points to the repository from which you cloned.
+
+    When you run commands like 'git pull' or 'git push origin', you are interacting with the remote repository named "origin". For example:
+    * 'git pull origin master': Pulls changes from the remote repository's master branch into your local repository.
+    * 'git push origin branch_name': Pushes changes from your local branch to the remote repository's branch with the specified name.
+
+    You can view the list of remotes for your repository using the command:
+    'git remote -v' 
+    This will show the names and URLs of all the remotes associated with your local repository.
