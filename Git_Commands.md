@@ -1,28 +1,26 @@
 # 1. How to check out a specific commit in Git?
-   You can either use the 'git checkout' or 'git switch' command.
-    (1) Using 'git checkout':
-        'git checkout <commit_hash>'
-        Replace '<commit_hash>' with the actual commit hash you want to checkout. This will put your repository in a "detached HEAD" state, meaning you're not on any branch
-    (2) Using 'git switch' (Git version 2.23 and later)
-        'git switch <commit_hash>'
-        This is similar to 'git checkout' but with a more straightforward syntax. Again, replace '<commit_hash>' with the actual commit hash.
+	You can either use the 'git checkout' or 'git switch' command.
+ 	(1) Using 'git checkout':
+  	'git checkout <commit_hash>'
+   	Replace '<commit_hash>' with the actual commit hash you want to checkout. This will put your repository in a "detached HEAD" state, meaning you're not on any branch
+	(2) Using 'git switch' (Git version 2.23 and later)
+    'git switch <commit_hash>'
+    This is similar to 'git checkout' but with a more straightforward syntax. Again, replace '<commit_hash>' with the actual commit hash.
     (3) Creating a New Branch from a Specific Commit:
-        If you want to work on the commit without being in a detached HEAD state, you can create a new branch from the commit:
-        'git checkout -b new_branch_name <commit_hash>'
-        or 
-        'git switch -c new_branch_name <commit_hash>'
-        Replace 'new_branch_name' with the name you want for your new branch and '<commit_hash>' with the actual commit hash.
+    If you want to work on the commit without being in a detached HEAD state, you can create a new branch from the commit:
+    'git checkout -b new_branch_name <commit_hash>'
+    or 
+    'git switch -c new_branch_name <commit_hash>'
+    Replace 'new_branch_name' with the name you want for your new branch and '<commit_hash>' with the actual commit hash.
     (4) Returning to the Previous Branch
-        After you've finished working with the specific commit, you might want to return to your previous branch. You can do this using:
-        'git checkout -'
-        This will switch back to the branch you were on before checking out the specific commit.
+    After you've finished working with the specific commit, you might want to return to your previous branch. You can do this using:
+    'git checkout -'
+    This will switch back to the branch you were on before checking out the specific commit.
     Note:
-        If you want to explore the commit history and don't need to make changes, you can also use 'git log' to view the commit hisotry and find the commit hash:
-        'git log'
-        Find the commit hash of the specific commit you're interested in and then use one of the above commands to check it out.
-
-        Remember that if you make changes in a detached HEAD state, those changes won't be associated with any branch. Creating a new branch is a good practice if you plan to make modifications.
-
+    If you want to explore the commit history and don't need to make changes, you can also use 'git log' to view the commit hisotry and find the commit hash:
+    'git log'
+    Find the commit hash of the specific commit you're interested in and then use one of the above commands to check it out.
+	Remember that if you make changes in a detached HEAD state, those changes won't be associated with any branch. Creating a new branch is a good practice if you plan to make modifications.
 # 2. How to switch to a different branch in Git?
     You can use the 'git checkout' or 'git switch' command. Here's how you can do it:
     (1) Using 'git checkout':
