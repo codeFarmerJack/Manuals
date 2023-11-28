@@ -143,7 +143,7 @@
     Here's a breakdown of the term:
     * Remote Repository: A remote repository is a version of your project hoseted on a server or another location. 
 	This allows multiple developers to work on the same project. The remote repository is usually hosted on platforms 
- like GitHub, GitLab, Bitbucket, or a private server.
+ 	like GitHub, GitLab, Bitbucket, or a private server.
     * Origin: "Origin" is just a conventionally used name for the default remote repository. When you clone a repository, 
 	Git automatically sets up a remote named "origin" that points to the repository from which you cloned.
 
@@ -160,7 +160,7 @@
 # 9. '**HEAD**' Introduction 
     In Git, '**HEAD**' is a symbolic reference that poitns to the last commit in the branch you are currently working on. 
 	It represents the tip of the current branch and serves as a convenient way to refer to the most recent commit in your 
- working directory.
+ 	working directory.
     Here are some key points about 'HEAD'"
     (1) Current Commit: 'HEAD' points to the commit that your working directory reflects. If you make a new commit, 'HEAD' 
 	will be updated to point to that new commit.
@@ -168,7 +168,7 @@
 	branch itself, and the branch, in turn, points to the latest commit in that branch.
     (3) Detached HEAD: In Git, you can also have a "detached HEAD" state. This occurs when 'HEAD' directly points to a 
 	specific commit instead of a branch. In this state, any new commits you make won't be associated with a branch, and 
- you might lose them if you switch branches.
+ 	you might lose them if you switch branches.
 
     Here are some common uses of 'HEAD'
     * View Current Commit:              'git log -n 1 HEAD'
@@ -184,7 +184,7 @@
 # 10. Switch between SSH and HTTP(S） protocols
     To switch between SSH and HTTP(S) protocols when cloning a Git repository, you need to update teh repository URL. Git 
 	supports both SSH and HTTP(S) as transport protocols, and you can switch between them based on your preference or the 
- available access method.
+ 	available access method.
     (1) Switching from HTTPS to SSH:
        If you initially cloned the repository using HTTPS and want to switch to SSH, you can update the remote URL using 
 	   the following steps:
@@ -195,7 +195,7 @@
 			Replace 'git@github.com:user/repo.git' with the SSH URL of your repository.
 	(2) Switching from SSH to HTTPS:
 		If you initially cloned the repository using SSH and want to switch to HTTPS, you can update the remote URL with 
-  the following steps:
+  		the following steps:
 		(i)	View the current remote URL:
     		'git remote -v'
     	(ii) Change the remote URL from SSH to HTTPS
@@ -208,7 +208,7 @@
 # 11. Git stash explanation:
     The '**git stash**' command is used in Git to temporarily save changes that you have not committed, allowing you to 
 	switch branches or perform other operations without committing your work. The stashed change can later be reapplied 
- to your working directory.
+ 	to your working directory.
     **Stash Local Changes**:
     'git stash'
     **Stash with a Message**:
