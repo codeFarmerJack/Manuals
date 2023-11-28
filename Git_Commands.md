@@ -1,3 +1,4 @@
+
 # 1. How to check out a specific commit in Git?
 	You can either use the 'git checkout' or 'git switch' command.
  	(1) Using 'git checkout':
