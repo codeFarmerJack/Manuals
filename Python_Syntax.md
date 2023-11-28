@@ -15,8 +15,8 @@
         * Sets: unordered collection of unique elements
         * my_set = {1, 2, 3}
     
-    Accessing data in Python depends on the type of data structure you're working with. Here are 
-    some examples for accessing data in tuple, list, dict, and set:
+  	Accessing data in Python depends on the type of data structure you're working with. Here are 
+  	some examples for accessing data in tuple, list, dict, and set:
 
 	(1) **Tuple**
 	my_tuple = (1, 2, 3, 'a', 'b')
@@ -38,16 +38,17 @@
 	
 	(4) **Set**
 	my_set = {1, 2, 3, 'a', 'b'}
-	# Sets are unordered, so there's no index to access elements directly Checking membership
+	# Sets are unordered, so there's no index to access elements directly 
+ 	# Checking membership
 	element_existence = 'a' in my_set
 	
 	Keep in mind that for sets, there is no concept of indexing as they are unordered collections 
- 	of unique elements. Instead, you typically use methods like in to check for membership.
+ 	of unique elements. Instead, you typically use methods like **in** to check for membership.
 
 # 2. What is 'plt.gcf()'?
-    'gcf' stands for "get current figure". It is a function that returns a reference to the current 
+  	'gcf' stands for "get current figure". It is a function that returns a reference to the current 
 	figure in the current state of the plot. The figure is the top-level container for all the plot elements. 
-    It is used to obtain a reference to the current figure, and then you can perform operations or 
+  	It is used to obtain a reference to the current figure, and then you can perform operations or 
 	modifications on that figure.
 
 # 3. Determine the common date range
@@ -76,7 +77,7 @@
 		so you can access each subplot using index (e.g., 'axes[0, 0] for the top-left subplot)
 
 # 5. **zip**
-    zip "pairs" up the elements of a number of lists, tuples, or other sequences, to create a list of tuples. 
+    zip "pairs" up the elements of a number of lists, tuples, or other sequences, to create an iterator of tuples. 
 	The zip function is used to combine elements from multiple iterables into tuples. Here's the basic syntax 
  	of the zip function:
     
@@ -89,15 +90,15 @@
 # 6. function of comma (,) and set_xdata
 
     import matplotlib.pyplot as plt
-    // Some sample data
+    # Some sample data
     x_data = [1, 2, 3, 4, 5]
     y_data = [2, 4, 6, 8, 10]
-    // Without comma (no unpacking)
+    # Without comma (no unpacking)
     line_no_comma = plt.plot(x_data, y_data, label='Original Line no comma')
-    // With comma (unpacking)
+    # With comma (unpacking)
     line_with_comma, = plt.plot(x_data, y_data, label='Original Line with comma')
 
-    // Create a simple line plot
+    # Create a simple line plot
     new_x_data = [0, 1, 2, 3, 4]
     line_with_comma.set_xdata(new_x_data)
 
@@ -138,7 +139,7 @@
 
     The related syntax for the enumerate function in Python is as follows:
     'enumerate(iterable, start = 0)'
-    The enumerate() function is commonly used to iterate over a sequence while keeping trakc of the index(position) of 
+    The enumerate() function is commonly used to iterate over a sequence while keeping track of the index(position) of 
 	the current item. The start index(position) can be set via **start**.
         * iterable: This is the sequence, collection, or iterator you want to iterate over.
         * start: This is an optional parameter, and its default value is 0. It represents the starting value of the 
