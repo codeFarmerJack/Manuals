@@ -1,4 +1,4 @@
-1. How to check out a specific commit in Git?
+# 1. How to check out a specific commit in Git?
    You can either use the 'git checkout' or 'git switch' command.
     (1) Using 'git checkout':
         'git checkout <commit_hash>'
@@ -23,7 +23,7 @@
 
         Remember that if you make changes in a detached HEAD state, those changes won't be associated with any branch. Creating a new branch is a good practice if you plan to make modifications.
 
-2. How to switch to a different branch in Git?
+# 2. How to switch to a different branch in Git?
     You can use the 'git checkout' or 'git switch' command. Here's how you can do it:
     (1) Using 'git checkout':
         'git checkout branch_name'
@@ -41,7 +41,7 @@
     If you have changes in your working directory that haven't been commited, Git may prevent you from switching branches to avoid conflicts. You can either commit your changes or stash them before switching branches.
     If you want to switch back to the branch you were on before switching to another branch, you can use the 'git switch -' or 'git checkout -' command.
 
-3.  When you're trying to switch to a specific commit without creating a branch, an error happens. If you want to work with that specific commit, you can follow the suggestions in the hint and use the '--detach' option. Here's how:
+# 3. When you're trying to switch to a specific commit without creating a branch, an error happens. If you want to work with that specific commit, you can follow the suggestions in the hint and use the '--detach' option. Here's how:
     'git checkout --detach <commit_hash>'
     or with 'git switch':
     'git switch --detach <commit_hash>'
@@ -59,7 +59,7 @@
     git switch new_branch_name'
     This approach allows you to work with the specific commit within the context of a new branch.
 
-4. How to delete a branch in Git?
+# 4. How to delete a branch in Git?
     You can use the 'git branch' command. Here are the steps:
     (1) Deleting a Local Branch:
         'git branch -d branch_name'
@@ -74,12 +74,12 @@
         Deleting a branch only removes the branch reference; it doesn't delete the commits. Commits are retained in the Git history, even if the branch is deleted.
         Ensure that you're not on the branch you are trying to delete. If you are, switch to a different branch using 'git checkout' or 'git switch'.
 
-5. How to check the branch I'm currently working on in Git?
+# 5. How to check the branch I'm currently working on in Git?
     You can use the following command:
     'git branch'
     The branch you are working on will be highlighted with an asterisk (*). 
 
-6. How to push to a specific branch in Git?
+# 6. How to push to a specific branch in Git?
     You can use the following command:
     'git push origin branch_name'
     Replace "branch_name" with the name of the branch you want to push to. This assumes that you have already committed your changes to the branch.
@@ -91,7 +91,7 @@
     'git push origin HEAD'
     This pushes the changes from your current local branch (HEAD) to the remote branch with the same name.
 
-7. 'git push origin HEAD' Failed. fatal: 'origin' does not appear to be a git repository. 
+# 7. 'git push origin HEAD' Failed. fatal: 'origin' does not appear to be a git repository. 
     The error indicates that Git is unable to find a remote repository named 'origin.' This typically means taht the remote repository is not configured for your Git repository. To resolve this, you need to set up a remote repository and associate it with the name 'origin'.
     Here are the steps to set up a remote repository:
     (1) Check Existing Remotes:
@@ -114,7 +114,7 @@
         'git push origin HEAD'
         This command pushes the changes in your current branch to the remote branch with the same name.
 
-8. Meaning of 'origin'
+# 8. Meaning of 'origin'
     In Git, "origin" is the default name given to the remote repository from which your local reopsitory was cloned. It's a conventionally used alias for the URL of the remote repository.
     Here's a breakdown of the term:
     * Remote Repository: A remote repository is a version of your project hoseted on a server or another location. This allows multiple developers to work on the same project. The remote repository is usually hosted on platforms like GitHub, GitLab, Bitbucket, or a private server.
@@ -128,7 +128,7 @@
     'git remote -v' 
     This will show the names and URLs of all the remotes associated with your local repository.
 
-9. '**HEAD**' Introduction 
+# 9. '**HEAD**' Introduction 
     In Git, '**HEAD**' is a symbolic reference that poitns to the last commit in the branch you are currently working on. It represents the tip of the current branch and serves as a convenient way to refer to the most recent commit in your working directory.
     Here are some key points about 'HEAD'"
     (1) Current Commit: 'HEAD' points to the commit that your working directory reflects. If you make a new commit, 'HEAD' will be updated to point to that new commit.
@@ -145,7 +145,7 @@
 
     In summary, 'HEAD' is a dynamic pointer that always points to the latest commit in the branch you are currently working on. Understanding 'HEAD' is crucial for navigating through your Git history and managing branches.
 
-10. Switch between SSH and HTTP(S） protocols
+# 10. Switch between SSH and HTTP(S） protocols
     To switch between SSH and HTTP(S) protocols when cloning a Git repository, you need to update teh repository URL. Git supports both SSH and HTTP(S) as transport protocols, and you can switch between them based on your preference or the available access method.
     (1) Switching from HTTPS to SSH:
        If you initially cloned the repository using HTTPS and want to switch to SSH, you can update the remote URL using the following steps:
@@ -165,7 +165,7 @@
 	After making these changes, future Git operations like '**git pull**' or '**git push**' will use the specified protocol.
 	Remember to replace '**origin**' with the actual name of your remote if you have a different remote name.
 
-11. Git stash explanation:
+# 11. Git stash explanation:
     The '**git stash**' command is used in Git to temporarily save changes that you have not committed, allowing you to switch branches or perform other operations without committing your work. The stashed change can later be reapplied to your working directory.
     **Stash Local Changes**:
     'git stash'
