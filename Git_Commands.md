@@ -3,12 +3,18 @@
 	You can either use the 'git checkout' or 'git switch' command.
  	(1) Using 'git checkout':
   	'git checkout <commit_hash>'
-   	Replace '<commit_hash>' with the actual commit hash you want to checkout. This will put your repository 
-	in a "detached HEAD" state, meaning you're not on any branch
+   	Replace '<commit_hash>' with the actual commit hash you want to checkout. This command will move your 
+    working directory to the state of the selected commit.
+    Please note that checking out to a specific commit puts you in a detached HEAD" state, meaning you're 
+	not on any branch. If you want to make changes or continue working you might want to create a new branch
+ 	from that commit:
+  	'git checkout -b new_branch_name <commit_hash>'
+   
 	(2) Using 'git switch' (Git version 2.23 and later)
     'git switch <commit_hash>'
     This is similar to 'git checkout' but with a more straightforward syntax. Again, replace '<commit_hash>' 
 	with the actual commit hash.
+ 
     (3) Creating a New Branch from a Specific Commit:
     If you want to work on the commit without being in a detached HEAD state, you can create a new branch 
 	from the commit:
@@ -17,6 +23,7 @@
     'git switch -c new_branch_name <commit_hash>'
     Replace 'new_branch_name' with the name you want for your new branch and '<commit_hash>' with the 
 	actual commit hash.
+ 
     (4) Returning to the Previous Branch
     After you've finished working with the specific commit, you might want to return to your previous 
 	branch. You can do this using:
@@ -37,7 +44,7 @@
         Replace 'branch_name' with the name of the branch you want to switch to.
     (2) Using 'git switch':
         'git switch branch_name'
-        Again, replacee 'branch_name' with the name of the branch you want to switch to.
+        Again, replace 'branch_name' with the name of the branch you want to switch to.
     (3) Creating a New Branch and Switching to It:
         If the branch you want to switch to doesn't exist, you can create a new branch and switch to it one step:
         'git checkout -b new_branch_name'
@@ -68,7 +75,7 @@
     After creating the branch, you can switch to it and continue your work:
     'git checkout new_branch_name'
     or with 'git switch':
-    git switch new_branch_name'
+    'git switch new_branch_name'
     This approach allows you to work with the specific commit within the context of a new branch.
 
 # 4. How to delete a branch in Git?
