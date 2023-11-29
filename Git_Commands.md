@@ -241,3 +241,60 @@
     'git stash clear'
     Using '**git stash**' is particularly useful when you need to switch branches or perform other operations that might 
 	conflict with your current changes. Stashing allows you to save your changes temporarily and reapply them later.
+ 
+# 12. How to download all branches of a Git repository?
+	(1) Clone the repository
+ 	If you haven't already cloned the repository, you can do so by using the 'git clone' command. This command will create
+  	a copy of the entire repository, including all branches, on your local machine.
+   	'git clone <repository-url>'
+	Replace '<repository-url>' with the URL of the Git repository.
+ 	(2) Fetch All Remote Branches
+  	After cloning the repository, navigate into the repository's directory using the 'cd' command and then use the following
+   	commands to fetch all remote branches:
+	'''
+ 	cd <repository-directory>
+  	git fetch --all
+   	'''
+	The 'git fetch --all' command fetches all branches from the remote repository. This fetches the branch references, but 
+ 	it doesn't automatically check out the branches.
+  	(3) List and Checkout Branches
+   	To see a list of all branches, you can use the following command:
+	'git branch -a'
+ 	This will show both local and remote branches. Remote branches are prefixed with 'remote/origin/'. To switch to a specific
+  	branch, you can use the 'git checkout' command:
+   	'git checkout <branch-name>'
+	Replace '<branch-name>' with the name of the branch you want to switch to.
+ 	Keep in mind that cloning all branches might result in a larger repository size, so be cautious, especially if the repository
+  	is large.
+# 13. How to download a specific branch?
+	(1) To download a specific branch from a Git repository, you can use the 'git clone' command wit the '--branch' option. 
+ 	Here's the syntax:
+  	'git clone --branch <branch-name> <repository -url>
+   	Replace '<branch-name>' with the name of the branch you want to download and '<repository-url>' with the URL of the Git repo.
+	(2) If you want to download a specific branch from an existing repository (i.e., you've already cloned the repository but 
+ 	want to fetch a specific branch), you can use the following commands:
+  	'''
+   	git fetech origin <branch-name>
+	git checkout <branch-name>
+ 	'''
+  	Replace '<branch-name>' with the name of the branch you want to fetch and checkout.
+   	These commands will fetch the latest changes for the specified branch from the remote repository and switch your working 
+	directory to that branch.
+# 14. What is tag? And what's the relationship between tag and cocmmit?
+	(1) In Git, a tag is a reference that points to a specific commit in the version history. Tags are often used to mark specific
+ 	points in history that are used for versioning, such as releases. Unlike branches, tags are typically used to capture a point
+  	in time, marking a specific commit as important, without changing or affecting the development or the current working state.
+   (2) The relationship between a tag and a commit is straightforward: a tag points to a specific commit in the Git history. When
+   	you create a tag, it is associated with a particular commit, and it essentially serves as a human-readable alias for that 
+	commit. Tags are useful for marking releases, milestones, or other significant points in your project.
+ 	(3) To create a tag you can use the following command:
+  	'git tag <tag-name> <commit-hash>'
+   		* <tag-name>: is the name you give to tag.
+	 	* <commit-hash>: is the SHA-1 hash of the commit you want to tag. You can also use branch names instead of commit hashes.
+   	To list tags:	
+	'git tag'
+	To show details of a specific tag: 		
+ 	'git show <tag-name>'
+ 	To push tags to a remote repository (to share them with others):
+  	'git push origin <tag-name>'
+   
