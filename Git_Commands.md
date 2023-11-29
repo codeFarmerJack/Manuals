@@ -297,4 +297,21 @@
  	'git show <tag-name>'
  	To push tags to a remote repository (to share them with others):
   	'git push origin <tag-name>'
-   
+# 15. How to list all the commits in a Git repository?
+	To list all commits in a Git repository, you can use the 'git log' command.
+ 	'git log'
+  	This command will display the commit history in your terminal. If you want to exit the log view, you can press 'q' key.
+
+	The 'git log' command also supports various options to customize the output. Here are some common optoins:
+ 	* Show abbreviated commit hashes: Use the '--oneline' option to show a concise log with abbrevated commit hashes 
+  	and commit messages.
+   	'git log --oneline'
+	* Show the commit graph: Use the '--graph' option to show an ASCII art representation of the commit graph.
+ 	'git log --graph'
+  	* Show all branches: Use the '--all' option to show the commit history for all branches.
+   	'git log --all'
+	* Show a specific number of commits: Use the '-n' or '--max-count' option to limit the number of commits displayed.
+ 	'git log -n 5'	# Show the last 5 commits
+  	* Show commits for a specific branch: Specify the branch name to see the commit history for that branch.
+   	'git log <branch-name>'
+	
