@@ -284,7 +284,7 @@
 	(1) In Git, a tag is a reference that points to a specific commit in the version history. Tags are often used to mark specific
  	points in history that are used for versioning, such as releases. Unlike branches, tags are typically used to capture a point
   	in time, marking a specific commit as important, without changing or affecting the development or the current working state.
-   (2) The relationship between a tag and a commit is straightforward: a tag points to a specific commit in the Git history. When
+   	(2) The relationship between a tag and a commit is straightforward: a tag points to a specific commit in the Git history. When
    	you create a tag, it is associated with a particular commit, and it essentially serves as a human-readable alias for that 
 	commit. Tags are useful for marking releases, milestones, or other significant points in your project.
  	(3) To create a tag you can use the following command:
