@@ -1,42 +1,42 @@
 # 1. Tuple, List, Dict and Set
+## 	Definition
     In Python, **()**, **[]**, and **{}** are used to denote different types of data structures. 
-    Here's a bried explanation of each:
-##  (1) Parenthese () - **Tuple** or Grouping
+    Here's a brief explanation of each:
+###  	(1) Parenthese () - **Tuple** or Grouping
         * Tuples are ordered, immutable sequence of elements
         * Used for grouping or organizing data. 
         * my_tuple = (1, 2, 3)
-## 	(2) Square Brackets [] - **List**:
+### 	(2) Square Brackets [] - **List**:
         * Lists are ordered, mutable sequences of elements
         * Used for storing collections of items
         * my_list = [1, 2, 3]
-## 	(3) Curly Braces {} - **Dict** or **Set**
+### 	(3) Curly Braces {} - **Dict** or **Set**
         * Dictionaries: unordered collection of key-value pairs
         * my_dict = {'key1': 'value1', 'key2':'value2'}
         * Sets: unordered collection of unique elements
         * my_set = {1, 2, 3}
-    
+## 	Access Element
   	Accessing data in Python depends on the type of data structure you're working with. Here are 
   	some examples for accessing data in tuple, list, dict, and set:
-
-## 	(1) **Tuple**
+### 	(1) **Tuple**
 	my_tuple = (1, 2, 3, 'a', 'b')
 	# Accessing elements by index
 	first_element = my_tuple[0]
 	third_element = my_tuple[2]
 
-## 	(2) **List**
+### 	(2) **List**
 	my_list = [1, 2, 3, 'a', 'b']
 	# Accessing elements by index
 	first_element = my_list[0]
 	third_element = my_list[2]
 
-## 	(3) **Dictionary**
+### 	(3) **Dictionary**
 	my_dict = {'name':'John', 'age':25, 'city':'New York'}
 	# Accessing values by key
 	name_value = my_dict['name']
 	age_value = my_dict['age']
 	
-## 	(4) **Set**
+### 	(4) **Set**
 	my_set = {1, 2, 3, 'a', 'b'}
 	# Sets are unordered, so there's no index to access elements directly 
  	# Checking membership
@@ -59,10 +59,10 @@
 	DataFrames, optimizedGopro and optimizedRT. The pd.to_datetime function is being used to convert 
  	the result of np.intersect1d (which finds the common elements between two arrays) into a pandas DateTimeIndex.
     Here's a breakdown of what each part of the code does:
-## 	(1) np.intersect1d(optimizedGopro['date_01'], optimizedRT['date_01']): 
+		* np.intersect1d(optimizedGopro['date_01'], optimizedRT['date_01']): 
         This finds the common elements (intersection) between the 'date_01' columns of the two DataFrames 
 		optimizedGopro and optimizedRT.
-## 	(2) pd.to_datetime(...) 
+		* pd.to_datetime(...) 
         This converts the result of the intersection to a pandas DateTimeIndex. This step is useful if the 
 		common elements are not already in a datetime format.
 
@@ -236,3 +236,22 @@
   		* 'get_axes()': This method retrieves a list of all the Axes objects in the current figure.
 	So, this line of code gives you a list of all the axes (subplots) in the current matplotlib figure.
  	Each Axes object represents an individual plot or subplot.
+# 20. figure, subplot, canvas, and axes in matplotlib
+	(1) Figure(fig):
+ 		* The figure is the top-level container for all elements of the plt.
+   		* It is the overall canvas, representing the entire area where visual elements are drawn.
+	 	* When you create a plot in matplotlib, you typically start by creating a figure using plt.figure() or plt.subplot().
+	(2) Canvas:
+ 		* The canvas is the area of the figure where the visual representation of your plot is actually rendered.
+   		* It is the surface upon which the axes(subplots) and other graphical elements are drawn.
+	 (3) Subplot:
+  		* A subplot is a specific region within the canvas where an individual plot or set of plots is displayed.
+		* Multiple subplots can be arranged in rows and columns within a single figure.
+  	(4) Axes:
+   		* An axes is the individual plotting area within a subplot or directly within the figure.
+	 	* It includes the coordinate system, ticks, labels, and any other graphical elements associated with a specific plot.
+	So, in a nutshell:
+ 		A figure is the top-level container representing the entire canvas. The canvas is area within the figure where all
+   		visual elements are rendered. A subplot is a specific region within the canvas where plots are displayed, and 
+	 	multiple subplots can be arranged in a grid. An axes is an individual plotting area within a subplot or directly 
+   		within the figure.
