@@ -47,7 +47,17 @@
 	figure in the current state of the plot. The figure is the top-level container for all the plot elements. 
   	It is used to obtain a reference to the current figure, and then you can perform operations or 
 	modifications on that figure.
-
+## 2.1 plt.gcf().get_axes()
+	In matplotlib, the 'get_axes()' method is a function provided by a Figure object. It returns a list of 
+ 	all the Axes objects contained within that figure. Each Axes object represents a subplot or individual
+  	plot in the figure.
+   	Here's a brief explanation:
+		* Figure: It's the top-level container for all elements of a plot. It can contain multiple subplots
+  		(Axes), text elements, and more.
+		* Axes: It's the area where the data is plotted. A figure can have one or more axes.
+  	The 'get_axes()' method allows you to retrieve a list of all the Axes objects in a figure, which you can
+   	then iterate over or manipulate individually.
+	
 # 3. Determine the common date range
 ## 	3.1 The DataTimeIndex of two DataFrames partially matches exactly.
     common_date_range = pd.to_datetime(np.intersect1d(optimizedGopro["date_01"], optimizedRT["date_01"]))
