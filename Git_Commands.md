@@ -112,7 +112,7 @@
     you might need to create the branch on the remote repository. You can do this by adding the '-u' option to 
     set up trakcing:
     'git push -u origin branch_name'
-    This estabishes a tracking relationship between your local branch and the remote branch. After the initial 
+    This establishes a tracking relationship between your local branch and the remote branch. After the initial 
 	setup, you can simply use 'git push' to push changes to the tracked remote branch.
 
 ##  (2) If you are working in a branch and want to push changes to the remote repository with the same name, 
@@ -198,7 +198,7 @@
 	on. Understanding 'HEAD' is crucial for navigating through your Git history and managing branches.
 
 # 10. Switch between SSH and HTTP(S） protocols
-    To switch between SSH and HTTP(S) protocols when cloning a Git repository, you need to update teh repository URL. Git 
+    To switch between SSH and HTTP(S) protocols when cloning a Git repository, you need to update the repository URL. Git 
 	supports both SSH and HTTP(S) as transport protocols, and you can switch between them based on your preference or the 
  	available access method.
 ##  (1) Switching from HTTPS to SSH:
@@ -219,40 +219,41 @@
     		Replace 'https://github.com/user/repo.git' with the HTTPS URL of your repository
 
 	After making these changes, future Git operations like '**git pull**' or '**git push**' will use the specified protocol.
-	Remember to replace '**origin**' with the actual name of your remote if you have a different remote name.
+	Remember to replace '**origin**' with the actual name of your remote repository if you have a different remote name.
 
 # 11. Git stash explanation:
     The '**git stash**' command is used in Git to temporarily save changes that you have not committed, allowing you to 
 	switch branches or perform other operations without committing your work. The stashed change can later be reapplied 
  	to your working directory.
     **Stash Local Changes**:
-    'git stash'
+    	'git stash'
     **Stash with a Message**:
     You can include a message to describe the changes being stashed.
-    'git stash save "Your stash message here"'
+    	'git stash save "Your stash message here"'
     **List Stashes**:
     To see a list of stashes:
-    'git stash list'
+    	'git stash list'
     **Apply the Most Recent Stash**:
-    To apply the most recent stash and remove it from the stash list:
-    'git stash apply'
+    To apply the most recent stash and leaves a copy in the stash list:
+	(you might need to use 'git stash drop' separately to remove it)
+    	'git stash apply'
     **Apply a Specific Stash**
     If you have multiple stashes and want to apply a specific one (replace 'stash@{n}' with the stash reference you want):
-    'git stash apply stash@{n}'
+    	'git stash apply stash@{n}'
     **Apply and Drop the Stash**:
     To apply the most recent stash and remove it from the stash list:
-    'git stash pop'
+    	'git stash pop'
     **Drop a Specific Stash**:
     To remove a specific stash without applying its changes:
-    'git stash drop stash@{n}'
+    	'git stash drop stash@{n}'
     **Clear All Stashes**:
     To remove all stashes:
-    'git stash clear'
+    	'git stash clear'
     Using '**git stash**' is particularly useful when you need to switch branches or perform other operations that might 
 	conflict with your current changes. Stashing allows you to save your changes temporarily and reapply them later.
  
 # 12. How to download all branches of a Git repository?
-##	(1) Clone the repository
+## 	(1) Clone the repository
  	If you haven't already cloned the repository, you can do so by using the 'git clone' command. This command will create
   	a copy of the entire repository, including all branches, on your local machine.
    	'git clone <repository-url>'
@@ -276,11 +277,11 @@
  	Keep in mind that cloning all branches might result in a larger repository size, so be cautious, especially if the repository
   	is large.
 # 13. How to download a specific branch?
-##	(1) To download a specific branch from a Git repository, 
-    you can use the 'git clone' command wit the '--branch' option. Here's the syntax:
+## 	(1) To download a specific branch from a Git repository, 
+    you can use the 'git clone' command with the '--branch' option. Here's the syntax:
   	'git clone --branch <branch-name> <repository -url>
    	Replace '<branch-name>' with the name of the branch you want to download and '<repository-url>' with the URL of the Git repo.
-##	(2) If you want to download a specific branch from an existing repository 
+## 	(2) If you want to download a specific branch from an existing repository 
     (i.e., you've already cloned the repository but want to fetch a specific branch), you can use the following commands:
   	'''
    	git fetech origin <branch-name>
@@ -289,63 +290,65 @@
   	Replace '<branch-name>' with the name of the branch you want to fetch and checkout.
    	These commands will fetch the latest changes for the specified branch from the remote repository and switch your working 
 	directory to that branch.
-# 14. What is tag? And what's the relationship between tag and cocmmit?
-##	(1) In Git, a tag is a reference that points to a specific commit in the version history. 
-    Tags are often used to mark specific
- 	points in history that are used for versioning, such as releases. Unlike branches, tags are typically used to capture a point
-  	in time, marking a specific commit as important, without changing or affecting the development or the current working state.
+# 14. What is tag? And what's the relationship between tag and commit?
+## 	(1) In Git, a tag is a reference that points to a specific commit in the version history. 
+    Tags are often used to mark specific points in history that are used for versioning, such as releases. Unlike branches, 
+	tags are typically used to capture a point in time, marking a specific commit as important, without changing or affecting 
+ 	the development or the current working state.
 ##  (2) The relationship between a tag and a commit is straightforward: 
-    a tag points to a specific commit in the Git history. When you create a tag, it is associated with a particular commit, and it essentially serves as a human-readable alias for that commit. Tags are useful for marking releases, milestones, or other significant points in your project.
+    a tag points to a specific commit in the Git history. When you create a tag, it is associated with a particular commit, 
+	and it essentially serves as a human-readable alias for that commit. Tags are useful for marking releases, milestones, 
+ 	or other significant points in your project.
 ## 	(3) To create a tag you can use the following command:
   	'git tag <tag-name> <commit-hash>'
    		* <tag-name>: is the name you give to tag.
 	 	* <commit-hash>: is the SHA-1 hash of the commit you want to tag. You can also use branch names instead of commit hashes.
    	To list tags:	
-	'git tag'
+		'git tag'
 	To show details of a specific tag: 		
- 	'git show <tag-name>'
+ 		'git show <tag-name>'
  	To push tags to a remote repository (to share them with others):
-  	'git push origin <tag-name>'
+  		'git push origin <tag-name>'
 # 15. How to list all the commits in a Git repository?
 	To list all commits in a Git repository, you can use the 'git log' command.
- 	'git log'
+ 		'git log'
   	This command will display the commit history in your terminal. If you want to exit the log view, you can press 'q' key.
 
 	The 'git log' command also supports various options to customize the output. Here are some common optoins:
- 	* Show abbreviated commit hashes: Use the '--oneline' option to show a concise log with abbrevated commit hashes 
+ 	* Show abbreviated commit hashes: Use the '--oneline' option to show a concise log with abbreviated commit hashes 
   	and commit messages.
-   	'git log --oneline'
+   		'git log --oneline'
 	* Show the commit graph: Use the '--graph' option to show an ASCII art representation of the commit graph.
- 	'git log --graph'
+ 		'git log --graph'
   	* Show all branches: Use the '--all' option to show the commit history for all branches.
-   	'git log --all'
+   		'git log --all'
 	* Show a specific number of commits: Use the '-n' or '--max-count' option to limit the number of commits displayed.
- 	'git log -n 5'	# Show the last 5 commits
+ 		'git log -n 5'	# Show the last 5 commits
   	* Show commits for a specific branch: Specify the branch name to see the commit history for that branch.
-   	'git log <branch-name>'
+   		'git log <branch-name>'
 # 16. How to display commits made on the remote repository (e.g., on a website like GitHub or GitLab)
     The 'git log' command, by default, shows the commit history of the branch you are currently on in your 
     local repository. It does not automatically include commits made on the remote repository.
     If you want  to see the commit history from the remote repository, you need to fetch the latest changes
-    from the remote repository before running 'git log'. The 'git fetch' command is used to retrieve chagnes
+    from the remote repository before running 'git log'. The 'git fetch' command is used to retrieve changes
     from a remote repository, but it doesn't automatically merge them into your local branch.
 
     Here's a sequence of commands you can use:
     # fetch the latest changes from the remote repository
-    git fetch origin
+    'git fetch origin'
     # Switch to the branch you are interested in
-    git checkout your_branch_name or git switch your_branch_name
+    'git checkout your_branch_name' or 'git switch your_branch_name'
     # Merge the changes from the remote repository into your local branch
-    git merge origin/your_branch_name
+    'git merge origin/your_branch_name'
     # View the commit history
-    git log
+    'git log'
     Replace 'your_branch_name' with the actual name of the branch you are interested in.
 
     Alternatively, if you want to see the commit history from the remote repository without merging the changes
     into your local branch, you can use:
     # Fetch and show the commit history from the remote repository
-    git fetch origin
-    git log origin/your_branch_name
+    'git fetch origin'
+    'git log origin/your_branch_name'
 
 # 17. git merge
     The 'git merge' command in Git is used to integrate changes from one branch into another. It combines
@@ -414,12 +417,20 @@
     'git checkout target_branch' or 'git switch target_branch'
     'git merge source_branch'
 
-    If Git detects that a fast-forward merge is possible, it will update teh branch pointer without creating 
+    If Git detects that a fast-forward merge is possible, it will update the branch pointer without creating 
     a merge commit.
 
     Fast-forward merges are suitable when working with feature branches or topic branches where development
     occurs independently and then is integrated back into a main branch. They help maintain a clean and 
     linear history.
-
+# 19. 'git fetch' and 'git pull'
+## 	'git fetch':	
+ 	'git fetch' gets the latest changes from the remote repository but doesn't automatically merge them into
+ 	your working branch. It's like fetching a preview of changes.
+## 	'git pull':
+   	On ther other hand, 'git pull' not only fetches the changes from the remote repository but also automatically
+   	merges them into your current working branch. It's like a fetch followed by a merge.
+	So, 'git fetch' is more cautious, allowing you to review changes before merging, while 'git merge' is a 
+ 	quicker way to fetch and merge in one step. 
 
 
