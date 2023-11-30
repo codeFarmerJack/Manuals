@@ -325,3 +325,8 @@
 		color, etc.
 		* annotation_clip: If True, the annotation will only be drawn when the xy is within the axes.
 		* **kwargs: Additional keyword arguments that are passed to the Text constructor for the next of the annotation.
+# 23. text_annotation = f'{label}: {y_value_data:.2f} \n{filtered_data}Opt: {y_value_filtered:.2f}'
+	'**.2f**' is a format specifier in Python used within f-strings or the str.format() method to control 
+ 	the formating of floating point numbers.
+  		* '**.nf**': this specifies n digits after the decimal point
+		* '**f**': Without a number after the dot, it defaults to displaying six digits after the decimal point.
