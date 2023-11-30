@@ -229,3 +229,10 @@
 	 	* iterable: The original iterable (e.g., list, tuple, string) that you are iterating over
    		* if condition (optional): An optional condition that filters the items. Only items satisfying the condition are 
 	 	included in the new list.
+# 19. plt.gcf().get_axes()
+		* 'plt': This likely refers to an instance of a plot or chart, usually created with a library like matplotlib.
+  		* 'gcf()': Stands for "get current figure." This retrieves the current figure, which is essentially the window
+		or canvas where your plot is being displayed.
+  		* 'get_axes()': This method retrieves a list of all the Axes objects in the current figure.
+	So, this line of code gives you a list of all the axes (subplots) in the current matplotlib figure.
+ 	Each Axes object represents an individual plot or subplot.
