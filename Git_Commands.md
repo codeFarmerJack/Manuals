@@ -528,3 +528,13 @@
     If you don't need the changes and just want to switch branches, you can discard them using:
     'git checkout -- .'
 
+# 22. git checkout -- filename
+    This command is used to discard changes in the working directory for a specific file and 
+    revert it to state in the last commit. It effectively overwrites the changes in the working
+    directory with the version from the last commit.
+
+    It's important to note that this command is used for local changes that haven't been staged
+    (added to the index) yet. If you have already staged the changes (using 'git add'), you would 
+    need to unstage them first before using 'git checkout -- filename':
+        * git reset HEAD filename
+        * git checkout -- filename
