@@ -538,3 +538,32 @@
     need to unstage them first before using 'git checkout -- filename':
         * git reset HEAD filename
         * git checkout -- filename
+
+# 23. feature branch and target branch
+	In Git, a "feature branch" and a "target branch" are terms often used to describe branches in 
+ 	a branching stragegy, typically in the context of collaborative development workflows. 
+## 23.1 Feature Branch
+	* A feature branch is a branch that is created to work on a specific feature, enhancement, or 
+ 	bug fix.
+  	* It allows developers to isolate their work on a particular task, keeping changes separate
+   	from the main development line.
+	* Feature branches are often short-lived and are eventually merged back into the main branch
+ 	when the work is complete.
+  	Example:
+   		# Create and switch to a new feature branch
+	 	git checkout -b feature/new-feature
+   		# Work on hte feature and make commits
+	 	git add .
+   		git commit -m "Implemented new feature"
+	 	# Once the feature is complete, merge it into the main branch
+   		git checkout main
+	 	git merge feature/new-feature
+## 23.2 Target Branch
+	* The target branch, also know as the "base branch" or "main branch," is typically the branch
+ 	where changes from feature branches are eventually merged.
+  	* Feature branches are merged into the target branch when the development work on the feature
+   	is complete and has been reviewed and tested.
+	
+ 	In collaborative development scenarios, developers create feature branches to work on specific 
+	tasks, making it easier to manage changes, review code, and avoid conflicts with ongoing 
+ 	development in the main branch.
