@@ -567,3 +567,12 @@
  	In collaborative development scenarios, developers create feature branches to work on specific 
 	tasks, making it easier to manage changes, review code, and avoid conflicts with ongoing 
  	development in the main branch.
+# 24. How to configure the Git environment:
+## 24.1 Set User Name:
+	'git config --global user.name "Your Name"
+## 24.2 Set User Email:
+	'git config --global user.email "your.email@example.com"
+## 24.3 Check Configuration:
+	'git config --list'
+## 24.4 Set Default Text Editor
+	'git config --global core.editor "your_text_editor"'
