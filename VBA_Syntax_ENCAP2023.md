@@ -38,3 +38,7 @@
         MsgBox "Hello" & vbCrLf & "World"
     This code would display a message box with "Hello" on the first line and "World" on the 
     second line. vbCrLf is commonly used when you want to concatenate multiple lines of text.
+
+# 7. CDbl
+    CDbl is a conversion function that stands for "Convert to Double." It is used to convert 
+    a value to a double data type.
