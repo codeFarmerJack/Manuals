@@ -595,13 +595,10 @@
  	a type of public-key cryptography. When generating SSH key pair, you can choose different 
   	algorithms, and "ssh-ed25519" indicates the specific algorithm used for the key.
    	* rsa: Another common algorithm choice is RSA. 
-
+    
  	When generating an SSH key, you can choose the algorithm using the -t option, like this:
   		ssh-keygen -t ed25519 -C "jwang79@jaguarlandrover.com"
-
-   	
-	eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_ed25519
-
- 	pbcopy < ~/.ssh/id_rsa.pub
+		eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_ed25519
+		pbcopy < ~/.ssh/id_ed25519.pub
   
 	
