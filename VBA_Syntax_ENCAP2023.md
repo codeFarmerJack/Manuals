@@ -31,4 +31,10 @@
     used when you're working with objects like ranges, worksheets, charts, etc. The basic 
     syntax for the Set statement is:
     'Set variableName = objectReference'
-    
+
+# 6. vbCrLf
+    vbCrLf is a constant representing a carriage return and line feed, which are used to create
+    a new line in a text string. For example:
+        MsgBox "Hello" & vbCrLf & "World"
+    This code would display a message box with "Hello" on the first line and "World" on the 
+    second line. vbCrLf is commonly used when you want to concatenate multiple lines of text.
