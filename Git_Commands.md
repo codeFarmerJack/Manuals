@@ -567,6 +567,7 @@
  	In collaborative development scenarios, developers create feature branches to work on specific 
 	tasks, making it easier to manage changes, review code, and avoid conflicts with ongoing 
  	development in the main branch.
+  
 # 24. How to configure the Git environment:
 ## 24.1 Set User Name:
 	'git config --global user.name "Your Name"
@@ -576,3 +577,31 @@
 	'git config --list'
 ## 24.4 Set Default Text Editor
 	'git config --global core.editor "your_text_editor"'
+
+# 25. How to generate an SSH key?
+# 25.1 SSH-key generated via RSA algorithm
+ 	Using the following command:
+ 	ssh-keygen -t rsa -b 4096 -C "jwang79@jaguarlandrover.com"
+
+   	After generating the key, you can add it to the SSH agent:
+		eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_rsa
+	
+ 	Finally, you can copy the SSH key to your clipboard and add it to you Git provider.
+		pbcopy < ~/.ssh/id_rsa.pub
+  	Now, paste the copied key into the SSH settings on your Git platform.
+   
+# 25.2 The key should start with "ssh-ed25519" indication:
+	The prefix "ssh-ed25519" refers to the Ed25519 elliptic curve cryptography algorithm, which is 
+ 	a type of public-key cryptography. When generating SSH key pair, you can choose different 
+  	algorithms, and "ssh-ed25519" indicates the specific algorithm used for the key.
+   	* rsa: Another common algorithm choice is RSA. 
+
+ 	When generating an SSH key, you can choose the algorithm using the -t option, like this:
+  		ssh-keygen -t ed25519 -C "jwang79@jaguarlandrover.com"
+
+   	
+	eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_ed25519
+
+ 	pbcopy < ~/.ssh/id_rsa.pub
+  
+	
