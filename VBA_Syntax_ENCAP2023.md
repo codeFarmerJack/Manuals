@@ -46,3 +46,51 @@
 # 8. Trim
     The Trim function is used to remove leading and trailing spaces from a string. It does not
     remove spaces between words.
+ # 9. Val
+     The Val function is used to extract the numetric value from a string. It reads characters 
+     from the beginning of the string until it encouners a character that is not a valid part 
+     of a number and returns the numeric value formed by those characters.
+
+# 10. Exit
+    The Exit statement is used to immediately exit a loop or a subroutine (a function or a procedure).
+    It is often used in combination with conditional statement to control the flow of the program.
+
+# 11. IsNumeric
+    The IsNumeric function is used to determine whether a given expression can be evaluated as a 
+    number. It returns a Boolean value indicating whether the expression is numeric (True) or not (False).
+
+# 12. Ways to read a value from a cell 
+## 12.1 Direct Access:
+    Access the cell value directly using its address.
+        Dim myValue As Variant
+        myValue = Range("A1").Value
+## 12.2 Using Cells Property:
+    Use the Cells property to reference a cell by row and column
+        Dim myValue As Variant
+        myValue = Cells(1, 1).Value    ' Refers to cell A1
+## 12.3 With Worksheets:
+    Specify the worksheet to avoid ambiguity.
+        Dim myValue As Variant
+        myValue = Worksheets("Sheet1").Range("A1").Value
+## 12.4 With Range Object:
+    Use the Range object with more flexibility.
+        Dim myValue As Variant
+        Dim myCell As Range
+        Set myCell = Range("A1")
+        myValue = myCell.Value
+## 12.5 Reading Specific Data Types:
+    Use specific methods based on the data type you expect.   
+        Dim stingValue As String
+        stringValue = Range("A1").Text    ' Get the displayed text
+## 12.6 Reading Formulas:
+    To read the formula instead of the result, use the Formula property.
+        Dim formulaString As String
+        formulaString = Range("A1").Formula
+## 12.7 Reading Numeric Values:
+    Use Val or CDbl to convert text to numeric values
+        Dim numericValue As Double
+        numericValue = CDbl(Range("A1").Value)
+## 12.8 Reading Dates
+    If the cell contains a date, use CDate.
+        Dim myDate As Date
+        myDate = CDate(Range("A1").Value)
