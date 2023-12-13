@@ -42,3 +42,7 @@
 # 7. CDbl
     CDbl is a conversion function that stands for "Convert to Double." It is used to convert 
     a value to a double data type.
+
+# 8. Trim
+    The Trim function is used to remove leading and trailing spaces from a string. It does not
+    remove spaces between words.
