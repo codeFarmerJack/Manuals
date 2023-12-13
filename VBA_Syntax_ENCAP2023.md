@@ -129,6 +129,32 @@
 ## 15.7 Dynamic Structure
     One significant advantage of a Collection is that it is dynamic. You can add or remove items at 
     runtime, and the collection adjusts accordingly.
-# 16. Dictionary.Add spdTestVal, New Collection
+# 16. Dictionary.Add 
+    This is a method of the Dictionary object used to add a key-value pair to the dictionary.
+## 16.1 Dictionary.Add spdTestVal, New Collection
     Add a new key-value pair to the dictionary. The Key is spdTestVal, and the associated
     value is a new instance of a Collection.
+## 16.2 Dictionary.Add spdTestVal & "_Count", 0
+    * spdTestVal & "_Count": This is the key being added to the dictionary. It is formed by 
+    concatenating the value of spdTestVal with "_Count". So if spdTestVal is "Test1," the resulting
+    key would be "Test1_Count."
+    * , 0: This part specifies the value associated with the key being added. In this case, its' the 
+    numeric value 0. This is the initial value associated with the newly added key.
+# 17. Right(spdTestVal, 6) = "_Count"
+    This line of code checks if the rightmost 6 characters of the string variable spdTestVal are equal 
+    to "_Count"
+# 18. Set avgCell = outputRange.Find(Left(spdTestVal, Len(spdTestVal) - 6), LookIn:=xlValues, LookAt:=xlWhole)
+    * outputRange.Find: This part of the code is calling the Find method on the outputRange object. 
+    * Left(spdTestVal, Len(spdTestVal) - 6): This is the value being searched for. It's the left portion 
+    of spdTestVal with the last 6 characters removed. The Left function is used to get a specified 
+    number of characters from the left side of a string, and Len(spdTestVal) - 6 calculates the length
+    of spdTestVal minus 6 characters.
+    * LookIn:=xlValues: This parameter specifies where to look for the value. In this case, it's set to search
+    within the values of cells in outputRange.
+    * LookAt:=xlWhole: This parameter specifies the type of match to be performed. xlWhole means it's looking 
+    for a complete match.
+    * Set avgCell = ...: This line is setting the variable avgCell to the result of the Find method. If the 
+    value is found, avgCell will contain a reference to the cell where the value is found. If the value is 
+    not found, avgCell will be set to Nothing.
+    
+
