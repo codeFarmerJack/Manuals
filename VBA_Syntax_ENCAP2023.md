@@ -145,16 +145,25 @@
     to "_Count"
 # 18. Set avgCell = outputRange.Find(Left(spdTestVal, Len(spdTestVal) - 6), LookIn:=xlValues, LookAt:=xlWhole)
     * outputRange.Find: This part of the code is calling the Find method on the outputRange object. 
-    * Left(spdTestVal, Len(spdTestVal) - 6): This is the value being searched for. It's the left portion 
-    of spdTestVal with the last 6 characters removed. The Left function is used to get a specified 
-    number of characters from the left side of a string, and Len(spdTestVal) - 6 calculates the length
-    of spdTestVal minus 6 characters.
-    * LookIn:=xlValues: This parameter specifies where to look for the value. In this case, it's set to search
-    within the values of cells in outputRange.
-    * LookAt:=xlWhole: This parameter specifies the type of match to be performed. xlWhole means it's looking 
-    for a complete match.
-    * Set avgCell = ...: This line is setting the variable avgCell to the result of the Find method. If the 
-    value is found, avgCell will contain a reference to the cell where the value is found. If the value is 
-    not found, avgCell will be set to Nothing.
+    * Left(spdTestVal, Len(spdTestVal) - 6): This is the value being searched for. It's the left 
+    portion of spdTestVal with the last 6 characters removed. The Left function is used to get a 
+    specified number of characters from the left side of a string, and Len(spdTestVal) - 6 calculates 
+    the length of spdTestVal minus 6 characters.
+    * LookIn:=xlValues: This parameter specifies where to look for the value. In this case, it's set 
+    to search within the values of cells in outputRange.
+        - The LookIn parameter in the Find method specifies where to search for the specified value.
+        - xlValues is a constant in VBA that represents the values within cells, excluding any formulas.
+        So, when LookIn is set xlValues, the Find method searches for the specified value only in the
+        actual content of the cells.
+        - Other options for LookIn:
+            + xlFormulas: Searches for the specified value in formulas within the cells
+            + xlComments: Searches for the specified value in cell comments
+            + xlCommentsThreaded: Searches for the specified value in threaded cell comments.
+            + ...
+    * LookAt:=xlWhole: This parameter specifies the type of match to be performed. xlWhole means it's 
+    looking for a complete match.
+    * Set avgCell = ...: This line is setting the variable avgCell to the result of the Find method. 
+    If the value is found, avgCell will contain a reference to the cell where the value is found. If 
+    the value is not found, avgCell will be set to Nothing.
     
 
